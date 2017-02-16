@@ -5,18 +5,56 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <link rel='stylesheet' href='css/main.css'>
 </head>
 <body>
-	<h1>Service 1</h1>
-  <div id='myDiv'></div>
-  <br>
-  <hr>
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <h1>NETUTIL</h1>
+    <h3>Online electircty delivery</h3>
+  </div>
+</nav>
 
-  	<h1>Service 2</h1>
-  <div id='myDiv2'></div>
+<div class='center'>
+    <div class='col-md-12'><h1>Dashboard availability</h1>
+        <div id='dashboard'></div>
+    </div>
+    <div class='col-md-12'><h1>API availability</h1>
+        <div id='api'></div>
+    </div>
+
+</div>
+
+<div class='chart30'>
+  
+    <div id="container1" style="width:100%; height:100%;"></div>
+  <div id="chartContainer" style="height: 200px; width: 80%;">
+  </div>
+</div> 
+
+
+<div class='chart30Average'>
+  
+    <div id="container2" style="width:100%; height:100%;"></div>
+  <div id="chartContainer" style="height: 200px; width: 80%;">
+  </div>
+</div>
+
+<div class='chart7Days'>
+  
+    <div id="container3" style="width:100%; height:100%;"></div>
+  <div id="chartContainer" style="height: 200px; width: 80%;">
+  </div>
+</div>
+
 
   
  <script src="js/main.js"></script>
+ <script src="js/chartMonthAll.js"></script>
+ <script src="js/chartMonth.js"></script>
+  <script src="js/chartMonth2.js"></script>
 </body>
 </html>

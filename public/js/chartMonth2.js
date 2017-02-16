@@ -3,42 +3,47 @@ function sum(array) { return (array.reduce(function(a,b){return a + b},0))/24 } 
 
 $.getJSON('data/history.json', function(dataJSON){
 	var array1 = dataJSON.services[0].values //the pure values of Dashboard 
-	// console.log(array1)
+	var array2 = dataJSON.services[1].values
+  // console.log(array1)
 	var results = [];
       while (array1.length-1) {
         results.push(array1.splice(0, 24)); //new array results has now 30 subarrays
       }
       var sums = []
-      for(i=0; i<results.length; i++) {
+      var temp = results.length -1
+      for(i=temp; i>temp -7; i--) {
         sums.push(results[i])
       }
+      finalWeek = sums.reverse();
+      // console.log(finalWeek)
 
-
-      result = sums.map(function(month) {
-            return sum(month)
+      result = finalWeek.map(function(week) {
+            return sum(week)
        })
-
-    var array2 = dataJSON.services[1].values
-    // console.log(array2)
 
     var results2 = [];
-    while (array2.length-1) {
-        results2.push(array2.splice(0, 24)); //new array results has now 30 subarrays;one of each day
+      while (array2.length-1) {
+        results2.push(array2.splice(0, 24)); //new array results has now 30 subarrays
       }
-    var sums2 = []
-      for(i=0; i<results2.length; i++) {
+      var sums2 = []
+      var temp2 = results2.length -1
+      for(i=temp2; i>temp2 -7; i--) {
         sums2.push(results2[i])
       }
+      finalWeek2 = sums2.reverse();
+      // console.log(finalWeek)
 
-      result2 = sums2.map(function(month) {
-            return sum(month)
+      result2 = finalWeek2.map(function(week) {
+            return sum(week)
        })
+
+    
 
       
 
 
 
-	Highcharts.chart('container2', {
+	Highcharts.chart('container3', {
 
     title: {
         text: 'Status data of Electrical current'
@@ -67,9 +72,9 @@ $.getJSON('data/history.json', function(dataJSON){
 
     series: [{
         name: dataJSON.services[0].name,
-        data: result = sums.map(function(month) {
-            return sum(month)
-       })
+        data: result = finalWeek.map(function(week) {
+                return sum(week)
+                })
     },
 
     	{

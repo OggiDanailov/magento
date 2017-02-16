@@ -37,15 +37,15 @@ $.getJSON('data/history.json', function(dataJSON){
 
         
 
-Highcharts.chart('container', {
+Highcharts.chart('container1', {
     chart: {
         type: 'line'
     },
     title: {
-        text: 'Historical status data in the last 30 days'
+        text: 'Historical status data in hours over the last 30 days'
     },
     xAxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: ['hours']
     },
     yAxis: {
         title: {
