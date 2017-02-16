@@ -13,6 +13,11 @@ app.get('/charts',function(req,res){
   //__dirname : It will resolve to your project folder.
 });
 
+app.get('/charts7days',function(req,res){
+  res.sendFile(path.join(__dirname+'/views/charts7days.html'));
+  //__dirname : It will resolve to your project folder.
+});
+
 
 app.use(express.static(__dirname + '/public'));
 
