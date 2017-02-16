@@ -1,9 +1,11 @@
 body {
-	/*background-color: #FFCE9D !important;*/
+	background-color: #efefe3 !important;
 }
 
 .container {
 	text-align: center;
+	background-color: #def1f7;
+	width: 100%;
 }
 
 
@@ -17,19 +19,18 @@ h1 {
      float: none;
      margin-left: auto;
      margin-right: auto;
-     border:1px solid;
+     border:3px solid;
      border-radius: 1%;
 }
 
 .center {
 	margin-top: 200px;
+	background-color: #caebec;
 }
 
 .chart30, .chart30Average, .chart7Days {
 	margin-top: 60px;
 }
-
-
 
 .col-md-12 {
 	border: 1px solid;
@@ -39,10 +40,21 @@ h1 {
 }
 
 
-
-
 #dashboard, #api {
 	text-align: center;
 }
 
+#footer {
+	margin-top:50px;
+	background-color: #caebec;
+	width: 100%;
+	height:160px;
+}
 
+#images {
+     padding-top: 95px;
+}
+
+a:hover {
+  cursor:pointer;
+ }

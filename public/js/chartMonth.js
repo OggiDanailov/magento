@@ -8,13 +8,14 @@ $.getJSON('data/history.json', function(dataJSON){
       while (array1.length-1) {
         results.push(array1.splice(0, 24)); //new array results has now 30 subarrays
       }
-      var sums = []
+      var sums = []                     
       for(i=0; i<results.length; i++) {
         sums.push(results[i])
+        // console.log(sums)  
       }
 
 
-      result = sums.map(function(month) {
+      result = results.map(function(month) { // getting the average of each of the 30 subarrays
             return sum(month)
        })
 
@@ -41,16 +42,16 @@ $.getJSON('data/history.json', function(dataJSON){
 	Highcharts.chart('container2', {
 
     title: {
-        text: 'Status data of Electrical current'
+        text: 'Daily status data over the past 30 days'
     },
 
     subtitle: {
-        text: 'It gives the average sum of each day'
+        text: 'Average daily usage based on daily averages'
     },
 
     yAxis: {
         title: {
-            text: 'Value of ELectrical signal'
+            text: 'VALUES'
         }
     },
     // legend: {
@@ -66,7 +67,7 @@ $.getJSON('data/history.json', function(dataJSON){
     },
 
     series: [{
-        name: dataJSON.services[0].name,
+        name: dataJSON.services[0].name, //directly getting the name from the json file; in real live I would change it according to the charts' data
         data: result = sums.map(function(month) {
             return sum(month)
        })

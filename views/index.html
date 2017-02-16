@@ -1,22 +1,30 @@
 <html>
 <head>
-  <title>Magento</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <title>NETUTIL</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+  <meta name="author" content='Oggi Danailov' />
+
+  
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+  <link rel='stylesheet' href='css/main.css'>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
   <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <link rel='stylesheet' href='css/main.css'>
+  
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <h1>NETUTIL</h1>
-    <h3>Online electircty delivery</h3>
-  </div>
-</nav>
+    <div class="container">
+      <h1>NETUTIL</h1>
+      <h3>Online Electircty Delivery</h3>
+    </div>
+  </nav>
 
 <div class='center'>
     <div class='col-md-12'><h1>Dashboard availability</h1>
@@ -25,36 +33,47 @@
     <div class='col-md-12'><h1>API availability</h1>
         <div id='api'></div>
     </div>
-
 </div>
 
 <div class='chart30'>
   
     <div id="container1" style="width:100%; height:100%;"></div>
-  <div id="chartContainer" style="height: 200px; width: 80%;">
-  </div>
+    <div id="chartContainer" style="height: 200px; width: 80%;">
+    </div>
 </div> 
 
 
 <div class='chart30Average'>
   
     <div id="container2" style="width:100%; height:100%;"></div>
-  <div id="chartContainer" style="height: 200px; width: 80%;">
-  </div>
+    <div id="chartContainer" style="height: 200px; width: 80%;">
+    </div>
 </div>
 
 <div class='chart7Days'>
   
     <div id="container3" style="width:100%; height:100%;"></div>
-  <div id="chartContainer" style="height: 200px; width: 80%;">
-  </div>
+    <div id="chartContainer" style="height: 200px; width: 80%;">
+    </div>
 </div>
 
+<footer>
+  <div id='footer'>
+    <div class="col-md-4" id='images'>
+      <a href='https://www.facebook.com' target='_blank'><img src='img/FB.png' width='30px' height='30px'></a>
+      <a href='https://www.twitter.com' target='_blank'><img src='img/twitter.png' width='27px' height='27px'></a>
+      <a href='https://www.pinterest.com' target='_blank'><img src='img/pine.png' width='27px' height='27px'></a>
+      <a href='https://www.bandcamp.com' target='_blank'><img src='img/bc.png' width='27px' height='27px'></a>
+      <a href='https://www.github.com' target='_blank'><img src='img/git.png' width='27px' height='27px'></a>
+    </div>
+  </div>
+
+</footer>
 
   
  <script src="js/main.js"></script>
  <script src="js/chartMonthAll.js"></script>
  <script src="js/chartMonth.js"></script>
-  <script src="js/chartMonth2.js"></script>
+  <script src="js/chartMonth7.js"></script>
 </body>
 </html>

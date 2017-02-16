@@ -3,18 +3,18 @@ function sum(array) { return (array.reduce(function(a,b){return a + b},0))/24 } 
 
 $.getJSON('data/history.json', function(dataJSON){
 	var array1 = dataJSON.services[0].values //the pure values of Dashboard 
-	var array2 = dataJSON.services[1].values
+	var array2 = dataJSON.services[1].values //pure values of API
   // console.log(array1)
 	var results = [];
       while (array1.length-1) {
         results.push(array1.splice(0, 24)); //new array results has now 30 subarrays
       }
       var sums = []
-      var temp = results.length -1
+      var temp = results.length -1     //I run a loop from the end to get the last seven days
       for(i=temp; i>temp -7; i--) {
-        sums.push(results[i])
+        sums.push(results[i])         
       }
-      finalWeek = sums.reverse();
+      finalWeek = sums.reverse();       //need to reverse the new array in order to get the data in the correct chronoligcal order
       // console.log(finalWeek)
 
       result = finalWeek.map(function(week) {
@@ -23,7 +23,7 @@ $.getJSON('data/history.json', function(dataJSON){
 
     var results2 = [];
       while (array2.length-1) {
-        results2.push(array2.splice(0, 24)); //new array results has now 30 subarrays
+        results2.push(array2.splice(0, 24)); 
       }
       var sums2 = []
       var temp2 = results2.length -1
@@ -37,25 +37,20 @@ $.getJSON('data/history.json', function(dataJSON){
             return sum(week)
        })
 
-    
-
-      
-
-
 
 	Highcharts.chart('container3', {
 
     title: {
-        text: 'Status data of Electrical current'
+        text: 'Daily status data over the last 7 days'
     },
 
     subtitle: {
-        text: 'It gives the average sum of each day'
+        text: 'Average daily usage based on daily averages'
     },
 
     yAxis: {
         title: {
-            text: 'Value of ELectrical signal'
+            text: 'VALUES'
         }
     },
     // legend: {
@@ -87,13 +82,6 @@ $.getJSON('data/history.json', function(dataJSON){
     ]
 
 });
-
-
-
-
-
-
-
 
 
 
